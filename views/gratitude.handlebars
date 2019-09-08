@@ -1,0 +1,32 @@
+<body style="background-image:url(/images/pokemon-background-2.jpg)">
+    <div class="body-container">
+        <nav class="menu-container">
+            {{> menu userSigned=true gratitudeActive=true}}
+        </nav>
+        <section class="field-container">
+            <div class="signature-field">
+                <p>Thank you so much for signing our petition.</p>
+                <p>Your signature is much appreciated!</p>
+                <br>
+                <p><a href="/petition/supporters">View all {{amountSigned}} trainers that have signed </a></p>
+                <p><a href="/petition/profile">Edit your profile</a></p>
+                <br>
+                <p>This is your signature:</p>
+                <img src="{{signatureUrl}}">
+            </div>
+        </section>
+        <section class="copy-container">
+            <div class="button-container">
+                <form method="POST">
+                    <div class="button-text-container">
+                        <button type="hidden" id="button-text">Remove signature</button>
+                        <input type="hidden" name="remove" id="remove">
+                    </div>
+                    <div class="individual-field">
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </div>

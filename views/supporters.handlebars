@@ -1,0 +1,34 @@
+<body style="background-image:url(/images/pokemon-background-5.jpg)">
+    <div class="body-container">
+        <nav class="menu-container">
+            {{> menu userSigned=true supportersActive=true}}
+        </nav>
+        <section class="copy-container">
+            <p>We love all {{amountSigned}} trainers that signed our petition!</p>
+            <p>Once we have 1 million signatures, we will send them to the Pokémon Company.</p>
+            <p>We only need {{amountNeeded}} more signatures, so please ask your friends to join our cause.</p>
+            <p>Let's make our dream for an online RPG of Pokémon reality!</p>
+            <p>Big shout-out to the {{amountSigned}} trainers in our Hall of Fame:</p>
+        </section>
+        <section class="supporters-container">
+            <ul>
+                {{#listAllSupporters}}
+                    <li>
+                        {{#if url}}
+                            <a href="{{url}}">{{firstname}} {{lastname}}</a>
+                        {{else}}
+                            {{firstname}} {{lastname}}
+                        {{/if}}
+
+                        {{#if age}}
+                            ({{age}})
+                        {{/if}}
+
+                        {{#if city}}
+                            from <a href="/petition/supporters/{{city}}">{{city}}</a>
+                        {{/if}}
+                    </li>
+                {{/listAllSupporters}}
+            </ul>
+        </section>
+    </div>

@@ -1,0 +1,36 @@
+<body style="background-image:url(/images/pokemon-background-4.jpg)">
+    <div class="body-container">
+        <nav class="menu-container">
+            {{> menu userLoggedIn=true introductionActive=true}}
+        </nav>
+        <section class="copy-container">
+            <p>Thank you so much for joining our community of trainers!</p>
+            <p>Please tell a little bit more about yourself (optional):</p>
+        </section>
+        <section class="field-container">
+            <form method="POST">
+                <div class="individual-field">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age">
+                </div>
+
+                <div class="individual-field">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city">
+                </div>
+
+                <div class="individual-field">
+                    <label for="url">Homepage:</label>
+                    <input type="text" id="url" name="url" value="http://">
+                </div>
+
+                <div class="button-container">
+                    <button>Continue</button>
+                </div>
+
+                <div class="individual-field">
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                </div>
+            </form>
+        </section>
+    </div>

@@ -1,0 +1,47 @@
+<body style="background-image:url(/images/pokemon-background-1.jpg)">
+    <div class="body-container">
+        <nav class="menu-container">
+        {{> menu userLoggedOut=true registerActive=true}}
+        </nav>
+        <section class="copy-container">
+            <p>Dreaming to become a Pokémon Master, catch legendary Pokémon and fight against thousands of trainers?</p>
+            <p>Sign our petition for an online RPG of Pokémon!</p>
+            <p>Already have an account? Please <a href="/petition/login">login</a>. All fields are required:</p>
+
+            {{#if registerFailed}}
+            <p>Registering was not successful. Please try again.</p>
+            {{/if}}
+        </section>
+        <section class="field-container">
+            <form method="POST">
+
+                <div class="individual-field">
+                    <label for="firstname">First name:</label>
+                    <input type="text" id="firstname" name="firstname">
+                </div>
+
+                <div class="individual-field">
+                    <label for="lastname">Last name:</label>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+
+                <div class="individual-field">
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="individual-field">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+
+                <div class="button-container">
+                        <button>Create free account</button>
+                </div>
+
+                <div class="individual-field">
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                </div>
+            </form>
+        </section>
+    </div>

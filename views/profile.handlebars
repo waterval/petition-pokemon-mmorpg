@@ -1,0 +1,63 @@
+<body style="background-image:url(/images/pokemon-background-3.jpg)">
+<div class="body-container">
+    <nav class="menu-container">
+    {{> menu userSigned=true profileActive=true}}
+    </nav>
+    <section class="copy-container">
+        <p>Our community of trainers is looking forward to get to know better.</p>
+        <p>The information on your profile is only visible to the trainers in this community.</p>
+        <p>Feel free to edit your profile:</p>
+        {{#if profileUpdated}}
+        <p>Your profile has been successfully updated.</p>
+        {{/if}}
+        {{#userData}}
+    </section>
+    <section class="field-container">
+        <form method="POST">
+            <div class="individual-field">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" value="{{firstname}}">
+            </div>
+
+            <div class="individual-field">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" value="{{lastname}}">
+            </div>
+
+            <div class="individual-field">
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email" value="{{email}}">
+            </div>
+
+            <div class="individual-field">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="individual-field">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" value="{{age}}">
+            </div>
+
+            <div class="individual-field">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" value="{{city}}">
+            </div>
+
+            <div class="individual-field">
+                <label for="url">Homepage:</label>
+                <input type="url" id="url" name="url" value="{{url}}">
+            </div>
+
+        {{/userData}}
+
+            <div class="button-container">
+                <button>Update</button>
+            </div>
+
+            <div class="individual-field">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            </div>
+        </form>
+    </section>
+</div>

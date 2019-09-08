@@ -1,0 +1,31 @@
+<body style="background-image:url(/images/pokemon-background-6.jpg)">
+    <div class="body-container">
+        <nav class="menu-container">
+            {{> menu userLoggedIn=true signActive=true}}
+        </nav>
+        <section class="copy-container">
+            <p>Great to have you with us, {{userFirstName}}!</p>
+            <p>Every signature counts.</p>
+            <p>After signing, you are one step closer to become a Pokémon Master!</p>
+            {{#if notSigned}}
+            <p>Signing was not successful. Please try again.</p>
+            {{/if}}
+        </section>
+        <section class="field-container">
+            <form method="POST">
+                <div class="individual-field">
+                    <label for="signature">Please sign here:</label>
+                    <input type="hidden" name="signature" id="signature">
+                </div>
+                <div class="signature-field">
+                    <canvas id="canvas" width="400" height="100" name="canvas"></canvas>
+                </div>
+                <div class="button-container">
+                    <button>Submit</button>
+                </div>
+                <div class="individual-field">
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                </div>
+            </form>
+        </section>
+    </div>

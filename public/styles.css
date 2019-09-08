@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-size: 17px;
+    font-family: arial;
+}
+
+body {
+    margin: 50px;
+    background-image: url(/images/pokemon-background-5.jpg);
+    background-size: cover;
+}
+
+.body-container {
+    display: inline-block;
+    width: 500px;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+
+p {
+    margin: 10px 0;
+}
+
+nav {
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #333333;
+}
+
+nav a {
+    font-weight: bold;
+    padding: 2px;
+    text-decoration-line: none;
+}
+
+nav a:hover {
+    background-color: black;
+}
+
+nav a.active {
+    background-color: black;
+}
+
+nav a:last-child {
+    float: right;
+    padding: 0;
+}
+
+section {
+    padding: 10px;
+}
+
+.individual-field {
+    padding: 5px 0;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+input {
+    background-image: url("pokeball-field.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: black;
+    width: 260px;
+}
+
+button {
+    background-color: black;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.button-text-container {
+    text-align: left;
+}
+
+canvas {
+    border: 1px solid white;
+}
+
+#button-text {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+<body style="background-image:url(/images/pokemon-background-1.jpg)">
+    <div class="body-container">
+        <nav class="menu-container">
+            {{> menu userLoggedOut=true loginActive=true}}
+        </nav>
+        <section class="copy-container">
+            <p>Welcome back, trainer!</p>
+            <p>Please login to sign the petition and to see all supporters of our cause.</p>
+            <p>No account yet? Please <a href="/petition/register">register</a>.</p>
+            {{#if loginFailed}}
+            <p>Logging in was not successful. Please try again.</p>
+            {{/if}}
+        </section>
+        <section class="field-container">
+            <form method="POST">
+                <div class="individual-field">
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="individual-field">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+
+                <div class="button-container">
+                    <button>Log in</button>
+                </div>
+
+                <div class="individual-field">
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                </div>
+            </form>
+        </section>
+    </div>

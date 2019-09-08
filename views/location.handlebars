@@ -1,0 +1,27 @@
+<body style="background-image:url(/images/pokemon-background-5.jpg)">
+    <div class="body-container">
+        <nav class="menu-container">
+            {{> menu userSigned=true supportersActive=true}}
+        </nav>
+        <section class="copy-container">
+            <p>We have trainers all over the world!</p>
+            <p>Hall of Fame in {{cityName}}:</p>
+        </section>
+        <section class="supporters-container">
+            <ul>
+                {{#listCitySupporters}}
+                <li>
+                    {{#if url}}
+                        <a href="{{url}}" target="_blank">{{firstname}} {{lastname}}</a>
+                    {{else}}
+                        {{firstname}} {{lastname}}
+                    {{/if}}
+
+                    {{#if age}}
+                        ({{age}})
+                    {{/if}}
+                </li>
+                {{/listCitySupporters}}
+            </ul>
+        </section>
+    </div>

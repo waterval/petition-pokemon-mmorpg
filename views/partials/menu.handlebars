@@ -1,0 +1,44 @@
+    {{#if userLoggedOut}}
+        {{#if registerActive}}
+<a class="active" href="/petition/register">Register</a>
+<a href="/petition/login">Login</a>
+        {{/if}}
+        {{#if loginActive}}
+<a href="/petition/register">Register</a>
+<a class="active" href="/petition/login">Login</a>
+        {{/if}}
+    {{/if}}
+
+    {{#if userLoggedIn}}
+        {{#if introductionActive}}
+<a class="active" href="/petition/introduction">Introduction</a>
+<a href="/petition/sign">Sign petition</a>
+<a href="/petition/logout">Logout</a>
+        {{/if}}
+        {{#if signActive}}
+<a href="/petition/introduction">Introduction</a>
+<a class="active" href="/petition/sign">Sign petition</a>
+<a href="/petition/logout">Logout</a>
+        {{/if}}
+    {{/if}}
+
+    {{#if userSigned}}
+        {{#if gratitudeActive}}
+<a class="active" href="/petition/gratitude">Gratitude</a>
+<a href="/petition/profile">Profile</a>
+<a href="/petition/supporters">Trainers</a>
+<a href="/petition/logout">Logout</a>
+        {{/if}}
+        {{#if profileActive}}
+<a href="/petition/gratitude">Gratitude</a>
+<a class="active" href="/petition/profile">Profile</a>
+<a href="/petition/supporters">Trainers</a>
+<a href="/petition/logout">Logout</a>
+        {{/if}}
+        {{#if supportersActive}}
+<a href="/petition/gratitude">Gratitude</a>
+<a href="/petition/profile">Profile</a>
+<a class="active" href="/petition/supporters">Trainers</a>
+<a href="/petition/logout">Logout</a>
+        {{/if}}
+    {{/if}}

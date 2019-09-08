@@ -18,7 +18,7 @@ exports.userLoggedIn = function userLoggedIn(request, response, next) {
     }
 };
 
-exports.userSigned = function userLoggedIn(request, response, next) {
+exports.userSigned = function userSigned(request, response, next) {
     if (request.session.userLoggedIn && request.session.userSigned) {
         next();
     } else if (request.session.userLoggedIn) {

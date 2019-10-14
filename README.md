@@ -1,17 +1,17 @@
 # Petition for a Pokémon MMORPG
 
-Petition for a Pokémon MMORPG allows users to support a great cause. After collecting 1 million signatures, I will ask the Pokémon Company politely to create an MMORPG of the Pokémon universe.
+Petition for a Pokémon MMORPG allows everyone to support a great cause. They can create a free account and sign a petition by drawing their signature. After collecting one million signatures, the Pokémon Company will be politely requested to create a MMORPG of the Pokémon universe.
 
 ## Preview
 
 <p align="center">
-<img src="/public/images/petition-pokemon-mmorpg-preview.png" alt="Preview of # Petition for a Pokémon MMORPG">
+<img src="/public/images/petition-pokemon-mmorpg-preview.png" alt="Preview of Petition for a Pokémon MMORPG">
 </p>
 
 ## Features
 
 -   Create a free account
--   Login/logout option
+-   Login/logout to an account
 -   Draw/remove signature
 -   Share/edit profile information
 -   View all supporters of the petition
@@ -31,6 +31,7 @@ Petition for a Pokémon MMORPG allows users to support a great cause. After coll
 -   Body Parser
 -   Csurf
 -   Bcrypt
+-   Postgres
 
 ## Code Example
 

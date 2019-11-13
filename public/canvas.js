@@ -1,5 +1,9 @@
 const canvas = $("canvas");
-const c = canvas[0].getContext("2d");
+let c;
+if (canvas[0]) {
+    c = canvas[0].getContext("2d");
+}
+
 let canvasX, canvasY, pointerX, pointerY, currentX, currentY, isDrawing;
 
 canvas.on("mousedown", function(event) {

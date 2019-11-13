@@ -10,6 +10,7 @@ body {
     margin: 50px;
     background-image: url(/images/pokemon-background-5.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .body-container {
@@ -25,6 +26,7 @@ p {
 }
 
 nav {
+    text-align: right;
     margin-top: 8px;
     padding: 8px;
     background-color: #333333;
@@ -44,11 +46,6 @@ nav a.active {
     background-color: black;
 }
 
-nav a:last-child {
-    float: right;
-    padding: 0;
-}
-
 section {
     padding: 10px;
 }
@@ -63,7 +60,7 @@ label {
 }
 
 input {
-    background-image: url("pokeball-field.jpg");
+    background-image: url("images/pokeball-field.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
